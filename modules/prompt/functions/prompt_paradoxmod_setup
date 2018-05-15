@@ -161,6 +161,8 @@ function prompt_paradox_precmd {
 
   vcs_info
 
+  echo -ne "\033]0;$(basename `PWD`)\007"
+
   # Format PWD.
   _prompt_paradox_pwd=$(prompt-pwd)
 
@@ -236,8 +238,6 @@ function prompt_paradox_setup {
   # %v - virtualenv name.
   zstyle ':prezto:module:python:info:virtualenv' format 'virtualenv:%v'
 
-
-  vcs_info
 
   # Define prompts.
   PROMPT='
