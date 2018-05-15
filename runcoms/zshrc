@@ -23,6 +23,8 @@ source ~/.commonrc
 # for some godforsaken reason, this was necessary to enable history-beginning-search:
 #   (see also: https://unix.stackexchange.com/a/100860)
 
-bindkey "^[OA" history-beginning-search-backward
-bindkey "^[OB" history-beginning-search-forward
-
+# puts the cursor at the beginning!
+#bindkey "^[OA" history-beginning-search-backward
+#bindkey "^[OB" history-beginning-search-forward
+bindkey "^[OA" history-search-backward
+bindkey "^[OB" history-search-forward
